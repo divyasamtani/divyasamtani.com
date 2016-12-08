@@ -194,7 +194,10 @@ dd {
 @media (max-width:767px){
 	.col-xs-6:nth-child(2n+1) { clear: left; }
 }
-
+b, strong {
+    font-weight: bold;
+    font-size: 40px;
+}
 
 /*  --------------------------------------------
 
