@@ -1,65 +1,65 @@
-/* -------------------------------- 
+/* --------------------------------
 
 FOLDED LAYOUT STYLES
 
 -------------------------------- */
 
 
-/* -------------------------------- 
+/* --------------------------------
 
 Main content
 
 -------------------------------- */
 .overflow-hidden {
-	overflow: hidden;
-	}
+  overflow: hidden;
+  }
 .cd-main {
- 	overflow-x: hidden; position: relative;
-	}
+  overflow-x: hidden; position: relative;
+  }
 /* never visible - this is used in jQuery to check the current MQ */
 .cd-main::before {
- 	display: none; content: 'mobile';
-	}
+  display: none; content: 'mobile';
+  }
 .cd-main > * {
-	-webkit-transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s;
-	}
+  -webkit-transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s;
+  }
 /* on mobile - translate .cd-main content to the right when the .cd-folding-panel is open */
 .cd-main.fold-is-open > * {
-	-webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%); -webkit-transition: -webkit-transform 0.5s 0s;transition: transform 0.5s 0s;
-	}
+  -webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%); -webkit-transition: -webkit-transform 0.5s 0s;transition: transform 0.5s 0s;
+  }
 @media only screen and (min-width: 600px) {
   .cd-main.fold-is-open > * {
     -webkit-transform: translateX(600px); -ms-transform: translateX(600px); transform: translateX(600px);
-  	}
+    }
 }
 
 /* CD-GALLERY */
 .cd-gallery {
-	position: relative; margin: 0; padding: 0; list-style: none;
-	}
+  position: relative; margin: 0; padding: 0; list-style: none;
+  }
 .cd-gallery::after {
- 	clear: both; content: ""; display: table;
-	}
+  clear: both; content: ""; display: table;
+  }
 /* this is the dark layer covering the .cd-gallery when the .cd-folding-panel is open */
 .cd-gallery::before {
- 	display: block; content: ''; position: absolute; z-index: 1; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(28, 23, 38, 0.6); opacity: 0; visibility: hidden; -webkit-transition: opacity 0.5s 0.4s, visibility 0s 0.9s; transition: opacity 0.5s 0.4s, visibility 0s 0.9s;
+  display: block; content: ''; position: absolute; z-index: 1; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(28, 23, 38, 0.6); opacity: 0; visibility: hidden; -webkit-transition: opacity 0.5s 0.4s, visibility 0s 0.9s; transition: opacity 0.5s 0.4s, visibility 0s 0.9s;
     }
 .fold-is-open .cd-gallery::before {
- 	visibility: visible; opacity: 1; -webkit-transition: opacity 0.5s 0s, visibility 0s 0s; transition: opacity 0.5s 0s, visibility 0s 0s;
+  visibility: visible; opacity: 1; -webkit-transition: opacity 0.5s 0s, visibility 0s 0s; transition: opacity 0.5s 0s, visibility 0s 0s;
     }
 /* CD-ITEM */
 .cd-item {
- 	width: 100%; text-align: center; overflow: hidden; /* Force Hardware Acceleration */ -webkit-transform: translateZ(); -ms-transform: translateZ(); transform: translateZ(); -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s;
+  width: 100%; text-align: center; overflow: hidden; /* Force Hardware Acceleration */ -webkit-transform: translateZ(); -ms-transform: translateZ(); transform: translateZ(); -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s;
     }
 .cd-item div {
- 	display: table-cell; vertical-align: middle;
+  display: table-cell; vertical-align: middle;
     }
 .cd-item > a {
- 	display: table; height: 100%; width: 101%; overflow: hidden; color: #ffffff; -webkit-font-smoothing: antialiased; position: relative;
+  display: table; height: 100%; width: 101%; overflow: hidden; color: #ffffff; -webkit-font-smoothing: antialiased; position: relative;
     }
-.cd-item a:hover { 
-	color: #FFF; 
-	}
+.cd-item a:hover {
+  color: #FFF;
+  }
 .cd-item > a:before {
     content: "";
     position: absolute;
@@ -67,32 +67,32 @@ Main content
     right: 0;
     bottom: 0;
     left: 0;
-	opacity: .6; 
-	background-color: #08000A;
+  opacity: .6;
+  background-color: #08000A;
 }
-.cd-item a:hover:before { 
-	opacity: .8; 
-	}
+.cd-item a:hover:before {
+  opacity: .8;
+  }
 .cd-item i {
     font-size: 44px; z-index: 1; position: relative; margin-bottom: 12px;
-	}
+  }
 .cd-item h2 {
- 	font-size: 1.9rem; font-weight: 700; margin-top: 0; position: relative; z-index: 1; margin-bottom: .2em;
+  font-size: 1.9rem; font-weight: 700; margin-top: 0; position: relative; z-index: 1; margin-bottom: .2em;
     }
 .cd-item b {
- 	display: none; font-size: 10px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; padding: 10px 19px; color: rgba(255, 255, 255, 0.8); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 16px; position: relative; z-index: 1;
+  display: none; font-size: 10px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; padding: 10px 19px; color: rgba(255, 255, 255, 0.8); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 16px; position: relative; z-index: 1;
     }
 .cd-item p {
- 	line-height: 1.2; font-size: 13px; font-weight: 300; opacity: .6; padding: 0; position: relative; z-index: 1;
+  line-height: 1.2; font-size: 13px; font-weight: 300; opacity: .6; padding: 0; position: relative; z-index: 1;
     }
-.cd-item { 
-	background-size: cover; background-position: center;
-	}
+.cd-item {
+  background-size: cover; background-position: center;
+  }
 .cd-item > img {
-	display: none;
-	}
+  display: none;
+  }
 
-/* -------------------------------- 
+/* --------------------------------
 
 folding panel
 
@@ -249,19 +249,19 @@ folding panel
 .cd-fold-content .hentry > .entry-header {
   -webkit-transition: -webkit-transform 0.2s 0.3s, opacity 0.2s 0.3s;
   transition: transform 0.2s 0.3s, opacity 0.2s 0.3s;
-	}
+  }
 .cd-fold-content .entry-content > *:nth-child(1) {
   -webkit-transition: -webkit-transform 0.2s 0.2s, opacity 0.2s 0.2s;
   transition: transform 0.2s 0.2s, opacity 0.2s 0.2s;
-	}
+  }
 .cd-fold-content .entry-content > *:nth-child(2) {
   -webkit-transition: -webkit-transform 0.2s 0.1s, opacity 0.2s 0.1s;
   transition: transform 0.2s 0.1s, opacity 0.2s 0.1s;
-	}
+  }
 .cd-fold-content .entry-content > *:nth-child(n+3) {
   -webkit-transition: -webkit-transform 0.2s 0s, opacity 0.2s 0s;
   transition: transform 0.2s 0s, opacity 0.2s 0s;
-	}
+  }
 
 /* animate in */
 .is-open .cd-fold-content .hentry > .entry-header {
@@ -284,70 +284,70 @@ folding panel
 
 /* TABLET AND UP */
 @media only screen and (min-width: 600px) and (min-height: 500px) {
-  
+
   .cd-folding-panel {
     width: 660px;
-  	}
+    }
   .cd-fold-content {
-	  padding: 2em 4em;
-  	}
+    padding: 2em 4em;
+    }
   .cd-item i {
-	  font-size: 60px;
-  	}
+    font-size: 60px;
+    }
   .cd-item p {
-	  font-size: 15px;
-  	}
-	.cd-item h2 {
-		font-size: 3.8rem;
-		}
+    font-size: 15px;
+    }
+  .cd-item h2 {
+    font-size: 3.8rem;
+    }
 }
 
 /* DESKTOPS */
 @media only screen and (min-width: 992px) {
-	
+
   /* never visible - this is used in jQuery to check the current MQ */
   .cd-main::before {
     content: 'desktop';
-  	}
+    }
   /* reset style - on bigger devices we translate the gallery items */
   .cd-main.fold-is-open > * {
-    -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); 
-	}
-	
-  	.cd-item {
-		 width: 50%; float: left; -webkit-transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s;
-		}
-	.cd-item:last-child:nth-child(odd) {
-	 	width: 100%
-		}
-	.cd-item h2,
-	.cd-item p,
-	.cd-item i {
-	 	-webkit-transform: translateY(30px); -ms-transform: translateY(30px); transform: translateY(30px); -webkit-transition: -webkit-transform 0.3s 0.1s; transition: transform 0.3s 0.1s;
-		}
-	.cd-item p {
-	 	font-size: 16px; margin-bottom: 2em; opacity: .5;
-		}
-	.cd-item b {
-	 	opacity: 0; display: inline-block;  -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s; transition: opacity 0.3s 0s, transform 0.3s 0s;
-		}
-	.no-touchevents .cd-item a:hover h2,
-	.no-touchevents .cd-item a:hover p, 
-	.no-touchevents .cd-item a:hover i {
-	 	-webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); -webkit-transition: -webkit-transform 0.3s 0s; transition: transform 0.3s 0s;
-		}
-	.no-touchevents .cd-item a:hover b {
-	 	opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); -webkit-transition: opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s; transition: opacity 0.3s 0.1s, transform 0.3s 0.1s;
-		}
-	.fold-is-open .cd-item {
-	 	-webkit-transition: -webkit-transform 0.5s 0s; transition: transform 0.5s 0s; -webkit-transform: translateX(-400px); -ms-transform: translateX(-400px); transform: translateX(-400px);
-		}
-	.fold-is-open .cd-item:last-child:nth-child(odd) {
-	 	-webkit-transform: translateX(0px); -ms-transform: translateX(0px); transform: translateX(0px);
-		}
-	.fold-is-open .cd-item:nth-of-type(2n) {
-	 	-webkit-transform: translateX(400px); -ms-transform: translateX(400px); transform: translateX(400px);
-		}
+    -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0);
+  }
+
+    .cd-item {
+     width: 50%; float: left; -webkit-transition: -webkit-transform 0.5s 0.4s; transition: transform 0.5s 0.4s;
+    }
+  .cd-item:last-child:nth-child(odd) {
+    width: 100%
+    }
+  .cd-item h2,
+  .cd-item p,
+  .cd-item i {
+    -webkit-transform: translateY(30px); -ms-transform: translateY(30px); transform: translateY(30px); -webkit-transition: -webkit-transform 0.3s 0.1s; transition: transform 0.3s 0.1s;
+    }
+  .cd-item p {
+    font-size: 16px; margin-bottom: 2em; opacity: .5;
+    }
+  .cd-item b {
+    opacity: 0; display: inline-block;  -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s; transition: opacity 0.3s 0s, transform 0.3s 0s;
+    }
+  .no-touchevents .cd-item a:hover h2,
+  .no-touchevents .cd-item a:hover p,
+  .no-touchevents .cd-item a:hover i {
+    -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); -webkit-transition: -webkit-transform 0.3s 0s; transition: transform 0.3s 0s;
+    }
+  .no-touchevents .cd-item a:hover b {
+    opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); -webkit-transition: opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s; transition: opacity 0.3s 0.1s, transform 0.3s 0.1s;
+    }
+  .fold-is-open .cd-item {
+    -webkit-transition: -webkit-transform 0.5s 0s; transition: transform 0.5s 0s; -webkit-transform: translateX(-400px); -ms-transform: translateX(-400px); transform: translateX(-400px);
+    }
+  .fold-is-open .cd-item:last-child:nth-child(odd) {
+    -webkit-transform: translateX(0px); -ms-transform: translateX(0px); transform: translateX(0px);
+    }
+  .fold-is-open .cd-item:nth-of-type(2n) {
+    -webkit-transform: translateX(400px); -ms-transform: translateX(400px); transform: translateX(400px);
+    }
   .cd-folding-panel {
     left: 50%;
     right: auto;
@@ -391,7 +391,7 @@ folding panel
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Javascript disabled
 
